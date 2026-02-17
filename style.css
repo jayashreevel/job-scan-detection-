@@ -1,0 +1,100 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 420px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #007bff;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fake {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.high-risk {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.low-risk {
+    background: #d4edda;
+    color: #155724;
+}
+
+.link-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-box a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
+}

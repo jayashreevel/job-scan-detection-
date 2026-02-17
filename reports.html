@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scan Reports</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" style="width:90%;">
+    <h1>📊 <span>Job Scan Reports</span></h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Job Title</th>
+            <th>Description</th>
+            <th>URL</th>
+            <th>Result</th>
+            <th>Risk Score</th>
+        </tr>
+
+        {% for r in reports %}
+        <tr>
+            <td>{{ r[0] }}</td>
+            <td>{{ r[1] }}</td>
+            <td>{{ r[2] }}</td>
+            <td>{{ r[3] }}</td>
+            <td>{{ r[4] }}</td>
+            <td>{{ r[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="link-box">
+        ⬅ <a href="/">Back to Job Scan</a>
+    </div>
+</div>
+
+</body>
+</html>

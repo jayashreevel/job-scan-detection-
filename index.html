@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scan Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔍 <span>Job Scan Detection</span></h1>
+
+    <form method="POST">
+        <label>Job Title</label>
+        <input type="text" name="title" placeholder="Enter job title" required>
+
+        <label>Job Description</label>
+        <textarea name="desc" placeholder="Enter job description" required></textarea>
+
+        <label>Job URL</label>
+        <input type="text" name="job_url" placeholder="Enter job URL">
+
+        <button type="submit">Scan Job</button>
+    </form>
+
+    {% if result %}
+    <div class="result 
+        {% if 'FAKE' in result %}fake
+        {% elif 'HIGH' in result %}high-risk
+        {% else %}low-risk{% endif %}">
+        {{ result }} <br>
+        <small>{{ reason }}</small>
+    </div>
+    {% endif %}
+
+    <div class="link-box">
+        📂 <a href="/reports">View Database Reports</a>
+    </div>
+</div>
+
+</body>
+</html>
